@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="AccuracyStudy|Win32">
+      <Configuration>AccuracyStudy</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="BasicTest|Win32">
+      <Configuration>BasicTest</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="CompareTest|Win32">
+      <Configuration>CompareTest</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UberTest|Win32">
+      <Configuration>UberTest</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>direct</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(Configuration)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofx3DModelLoader\libs;..\..\..\addons\ofx3DModelLoader\src;..\..\..\addons\ofx3DModelLoader\src\3DS;..\..\..\addons\ofxOpenCv\libs;..\..\..\addons\ofxOpenCv\src;..\..\..\addons\ofxOpenCv\libs\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\contrib;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ml;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ts;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\video;..\..\..\addons\ofxOpenCv\libs\opencv\lib;..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;..\..\..\addons\ofxSvg\libs;..\..\..\addons\ofxSvg\src;..\..\..\addons\ofxSvg\libs\svgTiny;..\..\..\addons\ofxSvg\libs\svgTiny\src;..\..\..\addons\ofxVectorGraphics\libs;..\..\..\addons\ofxVectorGraphics\src;..\..\..\addons\ofxAwesomium\libs;..\..\..\addons\ofxAwesomium\src;..\..\..\addons\ofxKinect2\libs;..\..\..\addons\ofxKinect2\src;..\..\..\addons\ofxKinect2\src\utils;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\inc;$(AWE_DIR)include</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);Kinect20.lib;awesomium.lib;opencv_calib3d231d.lib;opencv_contrib231d.lib;opencv_core231d.lib;opencv_features2d231d.lib;opencv_flann231d.lib;opencv_gpu231d.lib;opencv_haartraining_engined.lib;opencv_highgui231d.lib;opencv_imgproc231d.lib;opencv_legacy231d.lib;opencv_ml231d.lib;opencv_objdetect231d.lib;opencv_video231d.lib;zlibd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x86;$(AWE_DIR)build\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofx3DModelLoader\libs;..\..\..\addons\ofx3DModelLoader\src;..\..\..\addons\ofx3DModelLoader\src\3DS;..\..\..\addons\ofxOpenCv\libs;..\..\..\addons\ofxOpenCv\src;..\..\..\addons\ofxOpenCv\libs\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\contrib;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ml;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ts;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\video;..\..\..\addons\ofxOpenCv\libs\opencv\lib;..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;..\..\..\addons\ofxSvg\libs;..\..\..\addons\ofxSvg\src;..\..\..\addons\ofxSvg\libs\svgTiny;..\..\..\addons\ofxSvg\libs\svgTiny\src;..\..\..\addons\ofxVectorGraphics\libs;..\..\..\addons\ofxVectorGraphics\src;..\..\..\addons\ofxAwesomium\libs;..\..\..\addons\ofxAwesomium\src;..\..\..\addons\ofxKinect2\libs;..\..\..\addons\ofxKinect2\src;..\..\..\addons\ofxKinect2\src\utils;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\inc;$(AWE_DIR)include</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);Kinect20.lib;awesomium.lib;opencv_calib3d231.lib;opencv_contrib231.lib;opencv_core231.lib;opencv_features2d231.lib;opencv_flann231.lib;opencv_gpu231.lib;opencv_haartraining_engine.lib;opencv_highgui231.lib;opencv_imgproc231.lib;opencv_legacy231.lib;opencv_ml231.lib;opencv_objdetect231.lib;opencv_video231.lib;zlib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x86;$(AWE_DIR)build\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>TARGETNAME=$(Configuration);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofx3DModelLoader\libs;..\..\..\addons\ofx3DModelLoader\src;..\..\..\addons\ofx3DModelLoader\src\3DS;..\..\..\addons\ofxOpenCv\libs;..\..\..\addons\ofxOpenCv\src;..\..\..\addons\ofxOpenCv\libs\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\contrib;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ml;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ts;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\video;..\..\..\addons\ofxOpenCv\libs\opencv\lib;..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;..\..\..\addons\ofxSvg\libs;..\..\..\addons\ofxSvg\src;..\..\..\addons\ofxSvg\libs\svgTiny;..\..\..\addons\ofxSvg\libs\svgTiny\src;..\..\..\addons\ofxVectorGraphics\libs;..\..\..\addons\ofxVectorGraphics\src;..\..\..\addons\ofxAwesomium\libs;..\..\..\addons\ofxAwesomium\src;..\..\..\addons\ofxKinect2\libs;..\..\..\addons\ofxKinect2\src;..\..\..\addons\ofxKinect2\src\utils;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\inc;$(AWE_DIR)include</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);Kinect20.lib;awesomium.lib;opencv_calib3d231.lib;opencv_contrib231.lib;opencv_core231.lib;opencv_features2d231.lib;opencv_flann231.lib;opencv_gpu231.lib;opencv_haartraining_engine.lib;opencv_highgui231.lib;opencv_imgproc231.lib;opencv_legacy231.lib;opencv_ml231.lib;opencv_objdetect231.lib;opencv_video231.lib;zlib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x86;$(AWE_DIR)build\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>TARGETNAME=$(Configuration);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofx3DModelLoader\libs;..\..\..\addons\ofx3DModelLoader\src;..\..\..\addons\ofx3DModelLoader\src\3DS;..\..\..\addons\ofxOpenCv\libs;..\..\..\addons\ofxOpenCv\src;..\..\..\addons\ofxOpenCv\libs\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\contrib;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ml;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ts;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\video;..\..\..\addons\ofxOpenCv\libs\opencv\lib;..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;..\..\..\addons\ofxSvg\libs;..\..\..\addons\ofxSvg\src;..\..\..\addons\ofxSvg\libs\svgTiny;..\..\..\addons\ofxSvg\libs\svgTiny\src;..\..\..\addons\ofxVectorGraphics\libs;..\..\..\addons\ofxVectorGraphics\src;..\..\..\addons\ofxAwesomium\libs;..\..\..\addons\ofxAwesomium\src;..\..\..\addons\ofxKinect2\libs;..\..\..\addons\ofxKinect2\src;..\..\..\addons\ofxKinect2\src\utils;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\inc;$(AWE_DIR)include</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);Kinect20.lib;awesomium.lib;opencv_calib3d231.lib;opencv_contrib231.lib;opencv_core231.lib;opencv_features2d231.lib;opencv_flann231.lib;opencv_gpu231.lib;opencv_haartraining_engine.lib;opencv_highgui231.lib;opencv_imgproc231.lib;opencv_legacy231.lib;opencv_ml231.lib;opencv_objdetect231.lib;opencv_video231.lib;zlib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x86;$(AWE_DIR)build\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>TARGETNAME=$(Configuration);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofx3DModelLoader\libs;..\..\..\addons\ofx3DModelLoader\src;..\..\..\addons\ofx3DModelLoader\src\3DS;..\..\..\addons\ofxOpenCv\libs;..\..\..\addons\ofxOpenCv\src;..\..\..\addons\ofxOpenCv\libs\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\contrib;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ml;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ts;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\video;..\..\..\addons\ofxOpenCv\libs\opencv\lib;..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;..\..\..\addons\ofxSvg\libs;..\..\..\addons\ofxSvg\src;..\..\..\addons\ofxSvg\libs\svgTiny;..\..\..\addons\ofxSvg\libs\svgTiny\src;..\..\..\addons\ofxVectorGraphics\libs;..\..\..\addons\ofxVectorGraphics\src;..\..\..\addons\ofxAwesomium\libs;..\..\..\addons\ofxAwesomium\src;..\..\..\addons\ofxKinect2\libs;..\..\..\addons\ofxKinect2\src;..\..\..\addons\ofxKinect2\src\utils;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\inc;$(AWE_DIR)include</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);Kinect20.lib;awesomium.lib;opencv_calib3d231.lib;opencv_contrib231.lib;opencv_core231.lib;opencv_features2d231.lib;opencv_flann231.lib;opencv_gpu231.lib;opencv_haartraining_engine.lib;opencv_highgui231.lib;opencv_imgproc231.lib;opencv_legacy231.lib;opencv_ml231.lib;opencv_objdetect231.lib;opencv_video231.lib;zlib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x86;$(AWE_DIR)build\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>TARGETNAME=$(Configuration);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofx3DModelLoader\libs;..\..\..\addons\ofx3DModelLoader\src;..\..\..\addons\ofx3DModelLoader\src\3DS;..\..\..\addons\ofxOpenCv\libs;..\..\..\addons\ofxOpenCv\src;..\..\..\addons\ofxOpenCv\libs\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\contrib;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ml;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ts;..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\video;..\..\..\addons\ofxOpenCv\libs\opencv\lib;..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;..\..\..\addons\ofxSvg\libs;..\..\..\addons\ofxSvg\src;..\..\..\addons\ofxSvg\libs\svgTiny;..\..\..\addons\ofxSvg\libs\svgTiny\src;..\..\..\addons\ofxVectorGraphics\libs;..\..\..\addons\ofxVectorGraphics\src;..\..\..\addons\ofxAwesomium\libs;..\..\..\addons\ofxAwesomium\src;..\..\..\addons\ofxKinect2\libs;..\..\..\addons\ofxKinect2\src;..\..\..\addons\ofxKinect2\src\utils;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\inc;$(AWE_DIR)include</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);Kinect20.lib;awesomium.lib;opencv_calib3d231.lib;opencv_contrib231.lib;opencv_core231.lib;opencv_features2d231.lib;opencv_flann231.lib;opencv_gpu231.lib;opencv_haartraining_engine.lib;opencv_highgui231.lib;opencv_imgproc231.lib;opencv_legacy231.lib;opencv_ml231.lib;opencv_objdetect231.lib;opencv_video231.lib;zlib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxOpenCv\libs\opencv\lib\vs;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x86;$(AWE_DIR)build\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AccuracyStudy_ofApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\BaseApp.cpp" />
+    <ClCompile Include="src\BackgroundUpdaterThread.cpp" />
+    <ClCompile Include="src\BasicTest_ofApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\CompareTest_ofApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\CrosshairStudyTask.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\DummyStudyTask.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\IRDepthTouchTracker.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="..\..\..\addons\ofx3DModelLoader\src\3DS\model3DS.cpp" />
+    <ClCompile Include="..\..\..\addons\ofx3DModelLoader\src\3DS\texture3DS.cpp" />
+    <ClCompile Include="..\..\..\addons\ofx3DModelLoader\src\ofx3dModelLoader.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxOpenCv\src\ofxCvColorImage.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxOpenCv\src\ofxCvContourFinder.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxOpenCv\src\ofxCvFloatImage.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxOpenCv\src\ofxCvHaarFinder.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxOpenCv\src\ofxCvImage.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxOpenCv\src\ofxCvShortImage.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSvg\src\ofxSvg.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSvg\libs\svgTiny\src\src_colors.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSvg\libs\svgTiny\src\svgtiny.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSvg\libs\svgTiny\src\svgtiny_gradient.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSvg\libs\svgTiny\src\svgtiny_list.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxVectorGraphics\src\ofxVectorGraphics.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxVectorGraphics\libs\CreEPS.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxAwesomium\src\ofxAwesomium.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxKinect2\src\ofxKinect2.cpp" />
+    <ClCompile Include="src\OldIRDepthTouchTracker.cpp" />
+    <ClCompile Include="src\OmniTouchSausageTracker.cpp" />
+    <ClCompile Include="src\ShapeFollowStudyTask.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\StudyTask.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\TextUtils.cpp" />
+    <ClCompile Include="src\TouchBoxStudyTask.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\UberTest_ofApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\WilsonMaxTouchTracker.cpp" />
+    <ClCompile Include="src\WilsonSingleTouchTracker.cpp" />
+    <ClCompile Include="src\WilsonStatTouchTracker.cpp" />
+    <ClCompile Include="src\WilsonTouchTracker.cpp" />
+    <ClCompile Include="src\WindowUtils.cpp" />
+    <ClCompile Include="src\WorldKitTouchTracker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AccuracyStudy_ofApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\BaseApp.h" />
+    <ClInclude Include="src\BackgroundUpdaterThread.h" />
+    <ClInclude Include="src\BasicTest_ofApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\CompareTest_ofApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\CrosshairStudyTask.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\DummyStudyTask.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\fixedqueue.h" />
+    <ClInclude Include="src\FPSTracker.h" />
+    <ClInclude Include="src\geomConfig.h" />
+    <ClInclude Include="src\IRDepthTouchTracker.h" />
+    <ClInclude Include="..\..\..\addons\ofx3DModelLoader\src\3DS\model3DS.h" />
+    <ClInclude Include="..\..\..\addons\ofx3DModelLoader\src\3DS\texture3DS.h" />
+    <ClInclude Include="..\..\..\addons\ofx3DModelLoader\src\3DS\Vector3DS.h" />
+    <ClInclude Include="..\..\..\addons\ofx3DModelLoader\src\ofx3DBaseLoader.h" />
+    <ClInclude Include="..\..\..\addons\ofx3DModelLoader\src\ofx3DModelLoader.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxCvBlob.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxCvColorImage.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxCvConstants.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxCvContourFinder.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxCvFloatImage.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxCvHaarFinder.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxCvImage.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxCvShortImage.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\src\ofxOpenCv.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv\cv.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv\cv.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv\cvaux.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv\cvaux.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv\cvwimage.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv\cxcore.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv\cxcore.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv\cxeigen.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv\cxmisc.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv\highgui.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv\ml.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\calib3d\calib3d.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\contrib\contrib.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\contrib\retina.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core\core.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core\core_c.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core\eigen.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core\internal.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core\mat.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core\operations.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core\types_c.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core\version.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\core\wimage.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\features2d\features2d.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\allocator.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\all_indices.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\any.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\autotuned_index.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\composite_index.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\config.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\defines.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\dist.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\dummy.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\dynamic_bitset.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\flann.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\flann_base.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\general.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\ground_truth.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\hdf5.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\heap.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\hierarchical_clustering_index.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\index_testing.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\kdtree_index.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\kdtree_single_index.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\kmeans_index.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\linear_index.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\logger.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\lsh_index.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\lsh_table.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\matrix.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\miniflann.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\nn_index.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\object_factory.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\params.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\random.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\result_set.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\sampling.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\saving.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\simplex_downhill.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\flann\timer.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu\devmem2d.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu\gpu.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu\gpumat.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu\matrix_operations.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\gpu\stream_accessor.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui\highgui.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\highgui\highgui_c.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\imgproc.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\imgproc_c.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\imgproc\types_c.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy\blobtrack.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy\compat.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy\legacy.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\legacy\streams.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ml\ml.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\objdetect\objdetect.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\opencv.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ts.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\ts\ts_gtest.h" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\video\background_segm.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\video\tracking.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxOpenCv\libs\opencv\include\opencv2\video\video.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxSvg\src\ofxSvg.h" />
+    <ClInclude Include="..\..\..\addons\ofxSvg\libs\svgTiny\src\svgtiny.h" />
+    <ClInclude Include="..\..\..\addons\ofxSvg\libs\svgTiny\src\svgtiny_internal.h" />
+    <ClInclude Include="..\..\..\addons\ofxVectorGraphics\src\ofxVectorGraphics.h" />
+    <ClInclude Include="..\..\..\addons\ofxVectorGraphics\libs\CreEPS.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxVectorGraphics\libs\CreEPS_Types.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxAwesomium\src\ofxAwesomium.h" />
+    <ClInclude Include="..\..\..\addons\ofxKinect2\src\ofxKinect2.h" />
+    <ClInclude Include="..\..\..\addons\ofxKinect2\src\ofxKinect2Enums.h" />
+    <ClInclude Include="..\..\..\addons\ofxKinect2\src\ofxKinect2Types.h" />
+    <ClInclude Include="..\..\..\addons\ofxKinect2\src\utils\DepthRemapToRange.h" />
+    <ClInclude Include="..\..\..\addons\ofxKinect2\src\utils\DoubleBuffer.h" />
+    <ClInclude Include="..\..\..\addons\ofxKinect2\src\utils\MeshGenerator.h" />
+    <ClInclude Include="src\OldIRDepthTouchTracker.h" />
+    <ClInclude Include="src\OmniTouchSausageTracker.h" />
+    <ClInclude Include="src\ShapeFollowStudyTask.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\StudyTask.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\TextUtils.h" />
+    <ClInclude Include="src\Touch.h" />
+    <ClInclude Include="src\TouchBoxStudyTask.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\TouchTracker.h" />
+    <ClInclude Include="src\UberTest_ofApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='BasicTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CompareTest|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AccuracyStudy|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UberTest|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\WebApp.h" />
+    <ClInclude Include="src\WilsonMaxTouchTracker.h" />
+    <ClInclude Include="src\WilsonSingleTouchTracker.h" />
+    <ClInclude Include="src\WilsonStatTouchTracker.h" />
+    <ClInclude Include="src\WilsonTouchTracker.h" />
+    <ClInclude Include="src\WindowUtils.h" />
+    <ClInclude Include="src\WorldKitTouchTracker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
+      <Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

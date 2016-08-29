@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "direct", "direct.vcxproj", "{7FD42DF7-442E-479A-BA76-D0022F99702A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openframeworksLib", "..\..\..\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj", "{5837595D-ACA9-485C-8E76-729040CE4B0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AccuracyStudy|Win32 = AccuracyStudy|Win32
+		BasicTest|Win32 = BasicTest|Win32
+		CompareTest|Win32 = CompareTest|Win32
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		UberTest|Win32 = UberTest|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.AccuracyStudy|Win32.ActiveCfg = AccuracyStudy|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.AccuracyStudy|Win32.Build.0 = AccuracyStudy|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.BasicTest|Win32.ActiveCfg = BasicTest|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.BasicTest|Win32.Build.0 = BasicTest|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.CompareTest|Win32.ActiveCfg = CompareTest|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.CompareTest|Win32.Build.0 = CompareTest|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Debug|Win32.Build.0 = Debug|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Release|Win32.ActiveCfg = Release|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.Release|Win32.Build.0 = Release|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.UberTest|Win32.ActiveCfg = UberTest|Win32
+		{7FD42DF7-442E-479A-BA76-D0022F99702A}.UberTest|Win32.Build.0 = UberTest|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.AccuracyStudy|Win32.ActiveCfg = Release|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.AccuracyStudy|Win32.Build.0 = Release|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.BasicTest|Win32.ActiveCfg = Release|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.BasicTest|Win32.Build.0 = Release|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.CompareTest|Win32.ActiveCfg = Release|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.CompareTest|Win32.Build.0 = Release|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.Debug|Win32.Build.0 = Debug|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.Release|Win32.ActiveCfg = Release|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.Release|Win32.Build.0 = Release|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.UberTest|Win32.ActiveCfg = Release|Win32
+		{5837595D-ACA9-485C-8E76-729040CE4B0B}.UberTest|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal
